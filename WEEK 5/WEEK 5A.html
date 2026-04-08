@@ -1,0 +1,93 @@
+: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Card Layout</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+}
+
+.card-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    width:250px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:auto;
+}
+
+.image-box{
+    position:relative;
+}
+
+.image-box button{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:8px 15px;
+    background:blue;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="card-container">
+
+<article class="card">
+
+<div class="image-box">
+<img src="c:\Users\Rahul\Pictures\Screenshots\Screenshot 2026-02-26 115140.png" alt="Card Image">
+<button>Read More</button>
+</div>
+
+<h2>Card 1</h2>
+
+</article>
+
+
+<article class="card">
+
+<div class="image-box">
+<img src="c:\Users\Rahul\Pictures\Screenshots\Screenshot 2026-02-26 115140.png" alt="Card Image">
+<button>Read More</button>
+</div>
+
+<h2>Card 2</h2>
+
+</article>
+
+
+<article class="card">
+
+<div class="image-box">
+<img src="c:\Users\Rahul\Pictures\Screenshots\Screenshot 2026-02-26 115140.png" alt="Card Image">
+<button>Read More</button>
+</div>
+
+<h2>Card 3</h2>
+
+</article>
+
+</section>
+
+</body>
+</html>
