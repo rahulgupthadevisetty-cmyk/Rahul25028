@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Website - Amrita</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header{
+            background: red
+            (31, 6, 221);
+            color:rgb(170, 239, 7);
+            text-align:center;
+            padding:15px;
+        }
+
+        .nav{
+            background:black;
+            text-align:center;
+            padding:12px;
+        }
+
+        .nav label{
+            color:rgb(192, 217, 3);
+            margin:0 20px;
+            font-size:18px;
+            cursor:pointer;
+        }
+
+        .nav label:hover{
+            color:rgb(3, 215, 56);
+        }
+
+        iframe{
+            width:100%;
+            height:500px;
+            border:none;
+        }
+
+        input{
+            display:none;
+        }
+
+        .content{
+            display:none;
+        }
+
+        #home:checked ~ #homeFrame,
+        #about:checked ~ #aboutFrame,
+        #contact:checked ~ #contactFrame{
+            display:block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>Amrita Vishwa Vidyapeetham</h2>
+    </div>
+
+    <!-- Hidden Radio Buttons -->
+    <input type="radio" name="menu" id="home" checked>
+    <input type="radio" name="menu" id="about">
+    <input type="radio" name="menu" id="contact">
+
+    <!-- Navigation -->
+    <div class="nav">
+        <label for="home">Home</label>
+        <label for="about">About</label>
+        <label for="contact">Contact</label>
+    </div>
+
+    <!-- HOME PAGE -->
+    <iframe id="homeFrame" class="content" srcdoc="
+        <html>
+        <body style='font-family:Arial;padding:20px;text-align:center;'>
+
+        <h2>Welcome to Amrita Vishwa Vidyapeetham</h2>
+
+        <img src='amrita.jpg' width='60%' style='border-radius:10px;'>
+
+        <p>Amrita University Campus View</p>
+
+        </body>
+        </html>
+    ">
+    </iframe>
+
+    <!-- ABOUT PAGE -->
+    <iframe id="aboutFrame" class="content" srcdoc="
+        <html>
+        <body style='font-family:Arial;padding:20px;'>
+
+        <h2>About Us</h2>
+
+        <p>Amrita Vishwa Vidyapeetham is a multi-disciplinary private university offering Engineering, Medical, and Management programs.</p>
+
+        <p>Amrita Vishwa Vidyapeetham is a multi-disciplinary, research-intensive private university with a student strength of over 30,000, supported by more than 2,000 faculty members.</p>
+
+        <p>With a network of ten campuses located in Amaravati, Amritapuri, Bengaluru, Chennai, Coimbatore, Kochi, Mysuru, Nagercoil, NCR Delhi (Faridabad), and Haridwar.</p>
+
+        <p>Amrita Vishwa Vidyapeetham has been ranked 8th in the National Institutional Ranking Framework (NIRF) 2025.</p>
+
+        </body>
+        </html>
+    ">
+    </iframe>
+
+    <!-- CONTACT PAGE -->
+    <iframe id="contactFrame" class="content" srcdoc="
+        <html>
+        <body style='font-family:Arial;padding:20px;'>
+
+        <h2>Contact Us</h2>
+
+        <p>Phone: 9182345450</p>
+        <p>Website: www.amrita.edu</p>
+
+        </body>
+        </html>
+    ">
+    </iframe>
+
+</body>
+</html>
