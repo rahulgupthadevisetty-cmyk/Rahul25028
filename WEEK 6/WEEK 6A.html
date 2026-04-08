@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Commerce Grid Layout</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+/* Grid Layout */
+.container{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    grid-template-rows:60px auto;
+    height:100vh;
+}
+
+/* Header */
+.header{
+    grid-column:1/3;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:22px;
+}
+
+/* Sidebar */
+.sidebar{
+    background:#f4f4f4;
+    padding:20px;
+}
+
+.sidebar button{
+    display:block;
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    background:#333;
+    color:white;
+    cursor:pointer;
+}
+
+.sidebar button:hover{
+    background:#555;
+}
+
+/* Product Grid */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    padding:20px;
+}
+
+/* Product Card */
+.card{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.card button{
+    margin-top:10px;
+    padding:8px;
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+Responsive E-Commerce Store
+</div>
+
+<div class="sidebar">
+<h3>Categories</h3>
+<button onclick="showCategory('electronics')">Electronics</button>
+<button onclick="showCategory('home')">Home Appliances</button>
+<button onclick="showCategory('clothing')">Clothing</button>
+</div>
+
+<div class="products" id="productArea">
+
+<div class="card electronics">
+<img src="https://via.placeholder.com/200">
+<h4>Smartphone</h4>
+<button>Buy Now</button>
+</div>
+
+<div class="card electronics">
+<img src="https://via.placeholder.com/200">
+<h4>Laptop</h4>
+<button>Buy Now</button>
+</div>
+
+<div class="card home">
+<img src="https://via.placeholder.com/200">
+<h4>Washing Machine</h4>
+<button>Buy Now</button>
+</div>
+
+<div class="card home">
+<img src="https://via.placeholder.com/200">
+<h4>Refrigerator</h4>
+<button>Buy Now</button>
+</div>
+
+<div class="card clothing">
+<img src="https://via.placeholder.com/200">
+<h4>T-Shirt</h4>
+<button>Buy Now</button>
+</div>
+
+<div class="card clothing">
+<img src="https://via.placeholder.com/200">
+<h4>Jeans</h4>
+<button>Buy Now</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function showCategory(category){
+    let products=document.querySelectorAll(".card");
+
+    products.forEach(function(item){
+        if(item.classList.contains(category)){
+            item.style.display="block";
+        }else{
+            item.style.display="none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
