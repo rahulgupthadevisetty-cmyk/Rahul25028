@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body style="background-color: beige;">
+        <h2 style = "text-align: center;">College Admission Registration</h2>
+        <table align="center" border="1px" cellspacing="0" cellpadding="10" style="background-color: bisque;">
+            <tr>
+                <th><label for="fname">Full Name:</label></th>
+                <td><input type="text" id="fname" placeholder="Enter Your Full name"></td>                
+            </tr>
+            <tr>
+                <th><label for ="email">Email:</label></th>
+                <td><input type="email" id="email" placeholder="Enter Your Email"></td>
+            </tr>
+            <tr>
+                <th><label for="pnum">Phone Number:</label></th>
+                <td><input type="number" id="pnum" placeholder="enter Your Phone Number"></td>
+            </tr>
+            <tr>
+                <th><label for="g">Gender:</label></th>
+                <td>
+                    <input type="radio" id="g" name="Gender">Male
+                    <input type="radio" id="g" name="Gender">Female
+                    <input type="radio" id="g" name="Gender">Other
+                </td>
+            </tr>
+            <tr>
+                <th><label for="c">Course Application:</label></th>
+                <td><select id="c">
+                    <option>B-tech</option>
+                    <option>B-arch</option>
+                    <option>BBA</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th><label for="h">Hobies:</label></th>
+                <td>
+                    <input type="radio" id="h" name="Hobies">Sports 
+                    <input type="radio" id="h" name="Hobbies">Music
+                    <input type="radio" id="h" name="Hobbies">Reading
+                </td>
+            </tr>
+            <tr>
+                <th><label for="date">Date of Birth:</label></th>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <th><label for="up">Upload Certificate:</label></th>
+                <td><input type="file" id="up"></td>
+            </tr>
+            <tr>
+                <th><label for="a">Address:</label></th>
+                <td><textarea rows="10" cols="30" placeholder="Enter Your Address"></textarea></td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit"> <input type="reset"></th>
+            </tr>
+        </table>
+    </body>
+</html>
